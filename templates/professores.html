@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Professores Cadastrados</h2>
+<a href="{{ url_for('professor.cadastrar_professor') }}">Novo Professor</a>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Disciplina</th>
+        <th>E-mail</th>
+        <th>Ações</th>
+    </tr>
+    {% for professor in professores %}
+    <tr>
+        <td>{{ professor.id }}</td>
+        <td>{{ professor.usuario.nome }}</td>
+        <td>{{ professor.disciplina }}</td>
+        <td>{{ professor.usuario.email }}</td>
+        <td>
+            <a href="{{ url_for('professor.editar_professor', professor_id=professor.id) }}">Editar</a>
+            <form action="{{ url_for('professor.excluir_professor', professor_id=professor.id) }}" method="post" style="display:inline;">
+                <button type="submit" onclick="return confirm('Tem certeza que deseja excluir?');">Excluir</button>
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

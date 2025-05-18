@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Editar Aluno</h2>
+<form method="POST">
+    <label>Nome:</label><br>
+    <input type="text" name="nome" value="{{ usuario.nome }}" required><br>
+    <label>E-mail:</label><br>
+    <input type="email" name="email" value="{{ usuario.email }}" required><br>
+    <label>Matrícula:</label><br>
+    <input type="text" name="matricula" value="{{ aluno.matricula }}" required><br>
+    <label>Turma:</label><br>
+    <input type="text" name="turma" value="{{ aluno.turma }}"><br><br>
+    <button type="submit">Salvar</button>
+    <a href="{{ url_for('aluno.listar_alunos') }}">Cancelar</a>
+</form>
+{% endblock %}

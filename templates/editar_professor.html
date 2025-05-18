@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Editar Professor</h2>
+<form method="POST">
+    <label>Nome:</label><br>
+    <input type="text" name="nome" value="{{ usuario.nome }}" required><br>
+    <label>E-mail:</label><br>
+    <input type="email" name="email" value="{{ usuario.email }}" required><br>
+    <label>Disciplina:</label><br>
+    <input type="text" name="disciplina" value="{{ professor.disciplina }}"><br><br>
+    <button type="submit">Salvar</button>
+    <a href="{{ url_for('professor.listar_professores') }}">Cancelar</a>
+</form>
+{% endblock %}

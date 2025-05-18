@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Login</h2>
+<form method="POST">
+    <label>E-mail:</label><br>
+    <input type="email" name="email" required><br>
+    <label>Senha:</label><br>
+    <input type="password" name="senha" required><br><br>
+    <button type="submit">Entrar</button>
+</form>
+<p>
+    Não tem cadastro? <a href="{{ url_for('auth.cadastro') }}">Cadastre-se aqui</a>
+</p>
+{% endblock %}

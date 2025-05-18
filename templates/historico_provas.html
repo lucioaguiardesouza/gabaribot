@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Histórico de Provas</title>
+</head>
+<body>
+    <h1>Histórico de Provas</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Prova ID</th>
+            <th>Ação</th>
+            <th>Usuário</th>
+            <th>Data/Hora</th>
+        </tr>
+        {% for h in historicos %}
+        <tr>
+            <td>{{ h.id }}</td>
+            <td>{{ h.prova_id }}</td>
+            <td>{{ h.acao }}</td>
+            <td>{{ h.usuario.nome }} ({{ h.usuario.email }})</td>
+            <td>{{ h.timestamp.strftime('%d/%m/%Y %H:%M:%S') }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{{ url_for('prova.listar_provas') }}">Voltar para Provas</a>
+</body>
+</html>

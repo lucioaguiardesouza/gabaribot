@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Provas Cadastradas</h2>
+<a href="{{ url_for('prova.cadastrar_prova') }}">Nova Prova</a>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Título</th>
+        <th>Disciplina</th>
+        <th>Data</th>
+        <th>Nº Questões</th>
+        <th>Valor Total</th>
+        <th>Professor</th>
+        <th>Ações</th>
+    </tr>
+    {% for prova in provas %}
+    <tr>
+        <td>{{ prova.id }}</td>
+        <td>{{ prova.titulo }}</td>
+        <td>{{ prova.disciplina }}</td>
+        <td>{{ prova.data.strftime('%d/%m/%Y') }}</td>
+        <td>{{ prova.numero_questoes }}</td>
+        <td>{{ prova.valor_total }}</td>
+        <td>{{ prova.professor.usuario.nome }}</td>
+        <td>
+            <a href="{{ url_for('prova.editar_prova', prova_id=prova.id) }}">Editar</a>
+            <form action="{{ url_for('prova.excluir_prova', prova_id=prova.id) }}" method="post" style="display:inline;">
+                <button type="submit" onclick="return confirm('Tem certeza que deseja excluir?');">Excluir</button>
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
