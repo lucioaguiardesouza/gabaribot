@@ -1,23 +1,34 @@
-# Flask Template
 
-This sample repo contains the recommended structure for a Python Flask project. In this sample, we use `flask` to build a web application and the `pytest` to run tests.
+# GABARIBOT
 
- For a more in-depth tutorial, see our [Flask tutorial](https://code.visualstudio.com/docs/python/tutorial-flask).
+## Introdução
 
- The code in this repo aims to follow Python style guidelines as outlined in [PEP 8](https://peps.python.org/pep-0008/).
+O sistema Edu-Scan.com (GABARIBOT) é um software projetado para automatizar a elaboração e, principalmente, a correção de provas, com foco em avaliações objetivas.
 
-## Running the Sample
+## Funcionalidades
 
-To successfully run this example, we recommend the following VS Code extensions:
+- **Geração e Correção de Provas**: Seu objetivo principal é gerar e corrigir provas de forma mais eficiente, utilizando um "gabarito inteligente".
+- **Automatização**: Reduz o tempo gasto pelos professores na criação manual, formatação e, crucialmente, na correção de avaliações.
+- **Correção OMR**: Utiliza tecnologia de Reconhecimento Óptico de Marcas (OMR) para processar folhas de resposta digitalizadas, identificar as marcações dos alunos e comparar automaticamente com o gabarito cadastrado para calcular a pontuação.
+- **Gerenciamento de Provas e Gabaritos**: Permite que o professor crie a estrutura da prova no sistema, defina suas características e cadastre o gabarito correspondente.
+- **Visualização e Ajuste de Notas**: Após o processamento, o professor pode visualizar as notas calculadas pelo sistema para cada aluno e tem a opção de revisar e ajustar manualmente as notas.
+- **Relatórios de Desempenho**: Pretende fornecer relatórios básicos de desempenho da turma e informações sobre as questões com maior/menor índice de acerto.
+- **Identificação de Provas/Alunos**: Utiliza QR Code nas provas para facilitar a identificação do aluno e da prova referente durante o processo de digitalização e processamento.
+- **Suporte a Usuários**: Inclui funcionalidades básicas como login, recuperação de senha e cadastro/gerenciamento de alunos.
 
-- [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-- [Python Debugger](https://marketplace.visualstudio.com/items?itemName=ms-python.debugpy)
-- [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance) 
+## Como Rodar Localmente
 
-- Open the template folder in VS Code (**File** > **Open Folder...**)
-- Create a Python virtual environment using the **Python: Create Environment** command found in the Command Palette (**View > Command Palette**). Ensure you install dependencies found in the `pyproject.toml` file
-- Ensure your newly created environment is selected using the **Python: Select Interpreter** command found in the Command Palette
-- Run the app using the Run and Debug view or by pressing `F5`
-- To test your app, ensure you have the dependencies from `dev-requirements.txt` installed in your environment
-- Navigate to the Test Panel to configure your Python test or by triggering the **Python: Configure Tests** command from the Command Palette
-- Run tests in the Test Panel or by clicking the Play Button next to the individual tests in the `test_app.py` file
+Ele ainda está rodando no repositório do GitHub.
+
+## Tecnologias
+
+- Python
+- HTML
+- CSS
+- JavaScript
+- SQL
+- Design
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT.
